@@ -1,10 +1,13 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./components/Counter/Counter";
+import Routing from "./routing/Routing";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  return <Counter initialValue={1}></Counter>;
+  return (
+    <Router>
+      <Routing />
+    </Router>
+  );
 }
 
 export default App;

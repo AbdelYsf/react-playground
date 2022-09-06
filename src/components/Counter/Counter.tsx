@@ -47,3 +47,6 @@ export default Counter;
 
 // webpack converts *.module.css to js module (only classes)
 // types comunity ,,,, yarn install @types/styled-component
+
+// hooks rules :  hooks should be called  only inside other hooks or components
+//            & should be called at the top level (not nested inside a loop or if)
