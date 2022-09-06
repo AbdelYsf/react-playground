@@ -1,4 +1,5 @@
 import styles from "./Counter.module.css";
+import { Container, RedContainer, ColoredContainer } from "./Counter.style";
 interface Props {
   initialValue: number;
 }
@@ -6,9 +7,7 @@ interface Props {
 const Counter = (props: Props) => {
   return (
     <>
-      <div className={`${styles.container} ${styles.counter}`}>
-        {props.initialValue}
-      </div>
+      <ColoredContainer color="pink"> {props.initialValue}</ColoredContainer>
     </>
   );
 };
