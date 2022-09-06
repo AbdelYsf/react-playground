@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Counter.module.css";
 import { Container, RedContainer, ColoredContainer } from "./Counter.style";
 interface Props {
@@ -17,6 +17,23 @@ const Counter = (props: Props) => {
     });
     // functional setState is better for perfomance (bulk change)
   };
+
+  // we can have many useEffect as we want
+  useEffect(() => {
+    alert("Hello");
+  }, []); // will run only once (mounting phase)
+
+  useEffect(() => {
+    if (count % 5 == 0) {
+      alert("counter is a multiple of 5");
+    } else {
+      console.log("not a multiple of 5");
+    }
+  }, [count]); // will run at the mounting phase & when count(deps) changed
+
+  useEffect(() => {
+    alert("state changed");
+  }); // will run every time the state changed
 
   return (
     <>
