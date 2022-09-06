@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Counter.module.css";
 import { Container, RedContainer, ColoredContainer } from "./Counter.style";
 interface Props {
@@ -5,9 +6,22 @@ interface Props {
 }
 
 const Counter = (props: Props) => {
+  // atomic useState
+  const [count, setCount] = useState<number>(props.initialValue);
+
+  const increment = () => {
+    // setCount(count + 1);
+
+    setCount((currentState) => {
+      return currentState + 1;
+    });
+    // functional setState is better for perfomance (bulk change)
+  };
+
   return (
     <>
-      <ColoredContainer color="pink"> {props.initialValue}</ColoredContainer>
+      <ColoredContainer color="pink"> {count}</ColoredContainer>
+      <button onClick={increment}>increment</button>
     </>
   );
 };
