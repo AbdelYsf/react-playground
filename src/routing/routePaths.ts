@@ -3,4 +3,5 @@ export const paths = {
   home: "/home",
   counter: "/counter",
   user: "/user/:id",
+  users: "/users",
 };

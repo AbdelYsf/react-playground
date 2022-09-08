@@ -7,15 +7,17 @@ export const useFetch = (url: string) => {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch(setError)
-      .finally(() => {
-        setLoading(false);
-      });
+    setTimeout(() => {
+      axios
+        .get(url)
+        .then((res) => {
+          setData(res.data);
+        })
+        .catch(setError)
+        .finally(() => {
+          setLoading(false);
+        });
+    }, 5000);
   }, [url]);
 
   return { data, isLoading, error };
