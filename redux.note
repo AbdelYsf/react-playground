@@ -1,0 +1,14 @@
+redux : state management library
+redux store :  object that holds and centers all the state of the application
+
+props drilling problem => context api (not practical for huge application as it does not center the store)=> redux
+
+yarn add @types/react-redux
+yarn add react-redux
+
+redux life cycle
+
+ -> store (state)
+ -> action (triggered from ui ) : each one has type and payload if necessary
+
+

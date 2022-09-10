@@ -6,4 +6,5 @@ export const paths = {
   users: "/users",
   hooks: "/hooks/:hook",
   infinitScroll: "/infinit_scroll",
+  nativeReduxDemo: "/native_redux_demo",
 };

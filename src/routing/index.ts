@@ -5,6 +5,7 @@ import { paths } from "./routePaths";
 import { UsersPage } from "../components/UsersPage/UsersPage";
 import { HooksPage } from "../components/HooksPage/HooksPage";
 import { InfinitScrollPage } from "../components/InfinitScrollPage/InfinitScrollPage";
+import { NativeReduxDemo } from "../redux/NativeReduxDemo";
 
 export interface RouteDetails {
   path: string;
@@ -40,5 +41,9 @@ export const ROUTES: Record<string, RouteDetails> = {
   scroll: {
     path: paths.infinitScroll,
     component: InfinitScrollPage,
+  },
+  nativeReduxDemo: {
+    path: paths.nativeReduxDemo,
+    component: NativeReduxDemo,
   },
 };
