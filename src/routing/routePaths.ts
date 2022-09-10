@@ -5,4 +5,5 @@ export const paths = {
   user: "/user/:id",
   users: "/users",
   hooks: "/hooks/:hook",
+  infinitScroll: "/infinit_scroll",
 };

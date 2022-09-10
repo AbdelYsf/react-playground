@@ -4,6 +4,7 @@ import UserPage from "../components/UserPage/UserPage";
 import { paths } from "./routePaths";
 import { UsersPage } from "../components/UsersPage/UsersPage";
 import { HooksPage } from "../components/HooksPage/HooksPage";
+import { InfinitScrollPage } from "../components/InfinitScrollPage/InfinitScrollPage";
 
 export interface RouteDetails {
   path: string;
@@ -35,5 +36,9 @@ export const ROUTES: Record<string, RouteDetails> = {
   hooks: {
     path: paths.hooks,
     component: HooksPage,
+  },
+  scroll: {
+    path: paths.infinitScroll,
+    component: InfinitScrollPage,
   },
 };
