@@ -4,4 +4,5 @@ export const paths = {
   counter: "/counter",
   user: "/user/:id",
   users: "/users",
+  hooks: "/hooks/:hook",
 };

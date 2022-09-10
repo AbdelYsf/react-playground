@@ -3,6 +3,7 @@ import { HomePage } from "../components/HomePage/HomePage";
 import UserPage from "../components/UserPage/UserPage";
 import { paths } from "./routePaths";
 import { UsersPage } from "../components/UsersPage/UsersPage";
+import { HooksPage } from "../components/HooksPage/HooksPage";
 
 export interface RouteDetails {
   path: string;
@@ -30,5 +31,9 @@ export const ROUTES: Record<string, RouteDetails> = {
   users: {
     path: paths.users,
     component: UsersPage,
+  },
+  hooks: {
+    path: paths.hooks,
+    component: HooksPage,
   },
 };
